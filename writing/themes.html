@@ -1,0 +1,14 @@
+---
+layout: default
+title: Themes
+---
+<h1>Themes</h1>
+
+<ul>
+  {% for theme in site.themes %}
+    <li>
+      <h2><a href="{{ theme.url }}">{{ theme.name }}</a></h2>
+      <p>{{ theme.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>

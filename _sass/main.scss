@@ -11,16 +11,20 @@ nav, footer ul {
 nav a, footer ul li {
     display: inline;
     margin-right: 20px;
+    color: #999;
 }
 a {
     text-decoration: none;
-    color: #999;
 }
 a:hover {
     text-decoration: underline;
 }
 h1 {
     font-size: 3em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+}
+h2 {
+    font-size: 2em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
@@ -33,13 +37,22 @@ footer {
     font-size: .8em;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+.listing {
+    margin: 0;
 }
-
-ul.posts li {
+.listing a {
+    color: black;
+}
+.listing li {
     list-style: none;
+    font-size: 1em;
+    margin: 0;
+    padding: 2em;
+    border-color: gold;
+    border-width: 5px;
+    border-style: solid;
+    margin: 1em 0em;
+
 }
 
 .current {

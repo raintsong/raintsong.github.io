@@ -1,5 +1,5 @@
 - name: Home
-  link: /
+  link: /home/
   color: red
 - name: About
   link: /about/

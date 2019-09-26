@@ -1,5 +1,25 @@
 name: Rain Tsong, educator, artist, researcher
 markdown: kramdown
 
+collections:
+  themes:
+    output: true
 
 
+defaults:
+  - scope:
+      path: ""
+      type: "themes"
+    values: 
+      layout: "theme"
+  - scope:
+      path: ""
+      type: "posts"
+    values: 
+      layout: "post"
+  - scope:
+      path: ""
+    values: 
+      layout: "default"
+
+permalink: /writing/:year/:month/:day/:title
