@@ -1,0 +1,11 @@
+---
+layout: default
+permalink: /writing/:year/:month/:day/:title
+---
+<h1>{{ page.title }}</h1>
+<p>By {{ page.author }}</p>
+<p>{{ page.date | date_to_string }}</p>
+<a href="/writing/">Back to Latest Posts</a>
+<div class="post">
+	{{ content }}
+</div>
