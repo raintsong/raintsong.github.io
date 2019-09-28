@@ -2,23 +2,36 @@ body {
     margin: 60px auto;
     width: 67%;
 }
+
 nav, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
 }
+
+.container ul {
+    list-style: none;
+}
+
 nav a, footer ul li {
     display: inline;
     margin-right: 20px;
     color: #999;
+
 }
+
+footer ul li a {
+    color: #999;
+}
+
 a {
     text-decoration: none;
 }
 a:hover {
     text-decoration: underline;
 }
+
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -35,6 +48,10 @@ p {
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
+}
+
+h1 a, h2 a {
+    color: #333;
 }
 
 .listing {
