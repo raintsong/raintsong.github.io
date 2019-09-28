@@ -8,37 +8,79 @@ a {
 a:hover {
     text-decoration: underline;
 }
+img {
+    width: 100%;
+}
 header {
     height: 10%;
     width: 100%;
 }
 
-nav {
-    overflow: hidden;
-    position: fixed;
-    height: 4em;
-    top: 0.1em;
-
-}
-
-nav, footer ul {
+nav, footer {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
     font-weight: bold;
 }
+@media (max-width: 35em) {
 
-nav a {
-    float: left;
-    margin: auto;
-    border-top: 3px solid white;
+    nav {
+        overflow: hidden;
+        height: inherit;
+        right: 0em;
+        text-align: right;
+    }
+    nav a {
+        float: right;
+        display: block;
+        margin: 0.2em;
+        padding: 0.5em;
+        border-top: none;
+        border-right: 3px solid white;
+    }
+    .current {
+        border-right: 3px solid red;
+    }
+    .current:hover {
+        border-top: 0;
+        border-right: 3px solid red;
+    }
 }
-nav a:hover {
-    border-top: 3px solid #999;
+@media (min-width: 35em) {
+    nav {
+        overflow: hidden;
+        position: fixed;
+        height: 4em;
+        top: 0.1em;
+    }
 
+    nav, footer ul {
+        padding: 0px;
+        list-style: none;
+        width: 100%;
+    }
+
+    nav a {
+        float: left;
+        margin: auto;
+        border-top: 3px solid white;
+    }
+    nav a:hover {
+        border-top: 3px solid #999;
+
+    }
+    nav .nav-item {
+        padding: 1em 0.5em;
+    }
+    .current {
+        border-top: 3px solid red;
+    }
+    .current:hover {
+        border-top: 3px solid red;
+    }
 }
-nav .nav-item {
-    padding: 1em 1.5em;
+@media (min-width: 50em) {
+    nav .nav-item {
+        padding: 1em 1.5em;
+    } 
 }
 .container{
     margin-top: 6.1em;
@@ -102,8 +144,4 @@ h1 a, h2 a {
 
 .current {
     color: red;
-    border-top: 3px solid red;
-}
-.current:hover {
-    border-top: 3px solid red;
 }
