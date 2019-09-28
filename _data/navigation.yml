@@ -1,12 +1,12 @@
 - name: Home
   link: /home/
-  color: red
 - name: About
   link: /about/
-  color: gold
 - name: CV
   link: /cv/
-  color: lime
 - name: Writing
   link: /writing/
-  color: purple
+- name: Photography
+  link: /photos/
+- name: Contact
+  link: /contact/

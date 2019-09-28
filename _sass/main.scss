@@ -1,6 +1,24 @@
 body {
-    margin: 60px auto;
-    width: 67%;
+    margin:0 auto;
+    width: 67%
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+header {
+    height: 10%;
+    width: 100%;
+}
+
+nav {
+    overflow: hidden;
+    position: fixed;
+    height: 4em;
+    top: 0.1em;
+
 }
 
 nav, footer ul {
@@ -10,13 +28,28 @@ nav, footer ul {
     font-weight: bold;
 }
 
+nav a {
+    float: left;
+    margin: auto;
+    border-top: 3px solid white;
+}
+nav a:hover {
+    border-top: 3px solid #999;
+
+}
+nav .nav-item {
+    padding: 1em 1.5em;
+}
+.container{
+    margin-top: 6.1em;
+}
+
 .container ul {
     list-style: none;
 }
 
 nav a, footer ul li {
     display: inline;
-    margin-right: 20px;
     color: #999;
 
 }
@@ -25,12 +58,7 @@ footer ul li a {
     color: #999;
 }
 
-a {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
+
 
 h1 {
     font-size: 3em;
@@ -74,4 +102,8 @@ h1 a, h2 a {
 
 .current {
     color: red;
+    border-top: 3px solid red;
+}
+.current:hover {
+    border-top: 3px solid red;
 }

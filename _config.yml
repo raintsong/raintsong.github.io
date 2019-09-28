@@ -5,7 +5,6 @@ collections:
   themes:
     output: true
 
-
 defaults:
   - scope:
       path: ""
