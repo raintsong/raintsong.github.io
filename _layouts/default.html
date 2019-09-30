@@ -4,6 +4,29 @@
 			<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" href="/assets/css/styles.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+			<script>
+				console.log("Hello World!");
+				$(document).ready(function() {
+					console.log("ready!");
+					$("html").css({"background": "url(../photos/{{page.bg_image}}) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover"});
+					$(".blurb-darkener").click(function(){
+						$(this).children("p").toggle("slow", function() {
+						//	$(".blurb-darkener").animate({
+						//		width: "100px",
+						//		height: "100px"
+						//	}, 500);
+						//}, function() {
+						//	$(".blurb-darkener").animate({
+						//		width: "500px",
+						//		height: "500px"
+						//	}, 500)
+						});
+
+					});
+				})
+				console.log("Goodbye world."); 
+			</script>
 		</head>
 		<body>
 			<header>
