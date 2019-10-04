@@ -12,7 +12,7 @@
 					console.log("ready!");
 					$("html").css({"background": "url(../photos/{{page.bg_image}}) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover"});
 					$(".blurb-darkener").click(function(){
-						$(this).children("p").toggle("slow", function() {
+						$(this).children("p", "h1", "h2").toggle("slow", function() {
 						//	$(".blurb-darkener").animate({
 						//		width: "100px",
 						//		height: "100px"
