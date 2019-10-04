@@ -1,4 +1,8 @@
 ---
 title: Photography
 ---
-<img src= "travel nepal yaks.jpg">
+{% for image in site.static_files %}
+	{% if image.path contains 'photos' %}
+		<img src="{{site.baseurl}}{{image.path}}" alt ="image">
+	{% endif %}
+{% endfor %}

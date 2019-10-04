@@ -2,6 +2,7 @@ body {
     margin:0 auto;
     width: 67%;
     color: #eee;
+    font-family: 'Lato', sans-serif;
 }
 a {
     text-decoration: none;
@@ -153,9 +154,13 @@ h1 a, h2 a {
     background-color: #333;
     padding: 1em;
     border-radius: 1em;
+    border-bottom: 2px solid #222;
 }
 .blurb-darkener:hover {
     background-color: #444;
+}
+p a {
+    color: #aff;
 }
 #blurb-button {
     height: 2em;
