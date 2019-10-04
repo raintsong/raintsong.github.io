@@ -1,7 +1,7 @@
 body {
     margin:0 auto;
     width: 67%;
-    color: #eee;
+    color: #555;
     font-family: 'Lato', sans-serif;
 }
 a {
@@ -15,17 +15,19 @@ img {
 }
 header {
     height: 10%;
-    width: 100%;
+    width: 75%;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 nav, footer {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     font-weight: bold;
 }
-@media (max-width: 35em) {
+@media (max-width: 40em) {
 
     nav {
-        overflow: hidden;
         height: inherit;
         right: 0em;
         text-align: right;
@@ -46,24 +48,22 @@ nav, footer {
         border-right: 3px solid red;
     }
 }
-@media (min-width: 35em) {
+@media (min-width: 40em) {
     nav {
         overflow: hidden;
-        position: fixed;
-        height: 4em;
         top: 0.1em;
-    }
-
-    nav, footer ul {
         padding: 0px;
         list-style: none;
-        width: 100%;
+        width: 26.5em;
+        margin: 0 auto;
+
     }
 
     nav a {
-        float: left;
         margin: auto;
         border-top: 3px solid white;
+        text-align: center;
+        float: left;
     }
     nav a:hover {
         border-top: 3px solid #999;
@@ -79,11 +79,15 @@ nav, footer {
         border-top: 3px solid red;
     }
 }
-@media (min-width: 50em) {
+@media (min-width: 60em) {
+    nav {
+        width: 38.5em;
+    }
     nav .nav-item {
         padding: 1em 1.5em;
     } 
 }
+
 .background_image {
     display:none;
 }
@@ -97,16 +101,10 @@ nav, footer {
     list-style: none;
 }
 
-nav a, footer ul li {
+nav a {
     display: inline;
-    color: #999;
-
+    color: #fff;
 }
-
-footer ul li a {
-    color: #999;
-}
-
 
 
 h1 {
@@ -122,10 +120,6 @@ p {
     font-size: 1.2em;
     line-height: 1.7em;
     color: #eee;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
 }
 
 h1 a, h2 a {
@@ -157,7 +151,7 @@ h1 a, h2 a {
     border-bottom: 2px solid #222;
 }
 .blurb-darkener:hover {
-    background-color: #444;
+    background-color: #393939;
 }
 p a {
     color: #aff;
@@ -176,4 +170,25 @@ p a {
 
 .current {
     color: red;
+}
+
+.darkgray {
+    color: #333;
+}
+.medgray {
+    color: #666;
+}
+.medgray-border {
+    border-top: 3px solid #666;
+}
+nav .medgray:hover {
+    color: #888;
+}
+nav .medgray-border:hover {
+    border-top: 3px solid #888;
+}
+
+
+.light {
+    color: #fff
 }

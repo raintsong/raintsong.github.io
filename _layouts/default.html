@@ -10,7 +10,7 @@
 				console.log("Hello World!");
 				$(document).ready(function() {
 					console.log("ready!");
-					$("html").css({"background": "url(../photos/{{page.bg_image}}) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover"});
+					$("html").css({"background": "url(../photos/{{page.bg_image}}) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover", "background-color": "#333"});
 					$(".blurb-darkener").click(function(){
 						$(this).children("p", "h1", "h2").toggle("slow", function() {
 						//	$(".blurb-darkener").animate({
@@ -23,8 +23,35 @@
 						//		height: "500px"
 						//	}, 500)
 						});
-
 					});
+					var bgtheme = "{{page.bg_theme}}";
+					var black = "#000";
+					var darkgray = "#333";
+					var medgray = "#555";
+					var white = "#fff";
+					var navItems = $("nav a");
+
+					if (bgtheme == "light") {
+						$("html").css({"background-color": "white"});
+						$("body, h1, h2, .container a").addClass("darkgray");
+						$("p").addClass("medgray");
+						
+						navItems.each(function() {
+							console.log($(this).hasClass("current"));
+							if ($(this).hasClass("current") == false) {
+								$(this).addClass("medgray medgray-border");
+							}
+						});
+						console.log(bgtheme);
+					}
+					else if (bgtheme == "dark") {
+//						$("html").css({"background-color": "#333"});
+						navItems.each(function() {
+
+						})
+						console.log(bgtheme);
+					}			
+					console.log(bgtheme);					
 				})
 				console.log("Goodbye world."); 
 			</script>

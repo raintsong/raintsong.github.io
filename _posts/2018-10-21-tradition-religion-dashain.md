@@ -2,6 +2,7 @@
 layout: post
 author: Rain
 theme: travel
+bg_theme: light
 ---
 
 I think the only time we ever had a Christmas tree in the house was when I was six. I remember that it shed a lot of needles. It probably smelled coniferous. It was one of those decisions that my parents made on a whim, because that's what other people do, and wouldn't it be fun to pretend to be like other people? We placed presents under the tree, like we did every year. But every other Christmas in my memory, we had to substitute for European/American tradition: a paper tree with cut-out diatom images as ornaments, which my mom found at work; the baby grand piano that left plenty of room for presents underneath; sometimes, simply the lights draped on the walls.
