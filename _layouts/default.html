@@ -10,9 +10,15 @@
 				console.log("Hello World!");
 				$(document).ready(function() {
 					console.log("ready!");
-					var activeSite = {{page.url}};
+					var activeSite = "{{page.url}}";
+					console.log(activeSite);
+					if (activeSite.indexOf("writing") == -1) {
+						$("html").css({"background": "url(../photos/{{page.bg_image}}) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover", "background-color": "#333"});						
+					}
+					else {
+						$("html").css("background-color", "#333");
+					}
 
-					$("html").css({"background": "url(../photos/{{page.bg_image}}) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover", "background-color": "#333"});
 					$(".blurb-darkener").click(function(){
 						$(this).children("p", "h1", "h2").toggle("slow", function() {
 						//	$(".blurb-darkener").animate({
@@ -33,9 +39,9 @@
 					var white = "#fff";
 					var navItems = $("nav a");
 
-					if (bgtheme == "light") {
+					if (bgtheme == "light" || activeSite.indexOf("writing") >= 0) {
 						$("html").css({"background-color": "white"});
-						$("body, h1, h2, .container a").addClass("darkgray");
+						$("h1, h2, .container a").addClass("darkgray");
 						$("p").addClass("medgray");
 						
 						navItems.each(function() {
@@ -51,10 +57,23 @@
 						navItems.each(function() {
 
 						})
-						console.log(bgtheme);
-					}			
-					console.log(bgtheme);					
-				})
+					}
+					var postInIndex = $(".listing li");
+					postInIndex.hover(function() {
+						window.status = $(this).find("a:first").attr("href");
+						$(this).children("h2").removeClass("darkgray").css({"text-decoration": "underline"});
+						$(this).find("p:last").css({"color": "red"});
+				    }, function () {
+				        window.status = "";
+						$(this).children("h2").addClass("darkgray").css({"text-decoration": "none"});
+						$(this).find("p:last").css({"color": medgray});
+
+				    });
+					postInIndex.click(function() {
+				        window.location = $(this).find("a:first").attr("href");
+				        return false;
+					});			
+				});
 				console.log("Goodbye world."); 
 			</script>
 

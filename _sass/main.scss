@@ -109,8 +109,12 @@ nav a {
 
 h1 {
     font-size: 2em;
-    margin: 0;
+    margin: 0 0.5em 0 0;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    display: inline;
+}
+.not-title {
+    font-weight: normal;
 }
 h2 {
     font-size: 1.5em;
@@ -130,16 +134,21 @@ h1 a, h2 a {
     margin: 0;
 }
 .listing a {
+
 }
 .listing li {
     list-style: none;
     font-size: 1em;
-    margin: 0;
-    padding: 2em;
-
-    margin: 1em 0em;
+    padding: 0em 0em 0em 2em;
+    margin: 3em 1em;
+    border-left: 3px solid gray;
 
 }
+
+.listing li:hover {
+    border-left: 3px solid red;
+}
+
 .blurb {
 }
 .blurb-darkener {
@@ -164,7 +173,6 @@ p a {
 #blurb-button:hover {
     background-color: green;
 }
-
 
 .current {
     color: red;

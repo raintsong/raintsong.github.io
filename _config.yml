@@ -11,11 +11,13 @@ defaults:
       type: "themes"
     values: 
       layout: "theme"
+      bg_theme: "light"
   - scope:
       path: ""
       type: "posts"
     values: 
       layout: "post"
+      bg_theme: "light"
   - scope:
       path: ""
     values: 

@@ -4,8 +4,6 @@ author: Rain
 theme: personal
 ---
 
-2019-10-04-thoughts
-
 Inspired by Zen and the art of motorcycle maintenance:
 
 We all live in little streams. When our streams share paths, they are rivers. When we are alone, they are brooks. All streams start in different places. All streams end in the collective seas of Earth.

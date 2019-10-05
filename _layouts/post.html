@@ -1,14 +1,10 @@
 ---
 layout: default
-bg_theme: light
 ---
 <h1>{{ page.title }}</h1>
-<p>By {{ page.author }}, written on {{ page.date | date_to_string }}
-  {% assign sometheme = site.themes | where: 'short_name', page.theme | first %}
-  {% if sometheme %}
-  	, filed under <a href="{{ sometheme.url }}">{{ sometheme.name }}</a>
+<p>By {{ page.author }}, written on {{ page.date | date_to_string }}{% assign sometheme = site.themes | where: 'short_name', page.theme | first %}{% if sometheme %}, filed under <a href="{{ sometheme.url }}">{{ sometheme.name }}</a>
   {% endif %}</p>
-<a href="/writing/">Back to Latest Posts</a>
+<a href="/writing/"><p>Back to Latest Posts</p></a>
 <div class="post">
 	{{ content }}
 </div>

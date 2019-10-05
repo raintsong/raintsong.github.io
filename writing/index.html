@@ -4,12 +4,13 @@ title: Writing
 bg_theme: light
 ---
 <h1>Latest Posts</h1>
-<a href="themes.html">Organized by theme</a>
+<h1 class="not-title"><a href="themes.html">Organized by theme</a></h1>
 <ul class="listing">
   {% for post in site.posts %}
     <li>
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <p>{{ post.excerpt }}</p>
+      <p>...</p>
     </li>
   {% endfor %}
 </ul>
