@@ -10,6 +10,8 @@
 				console.log("Hello World!");
 				$(document).ready(function() {
 					console.log("ready!");
+					var activeSite = {{page.url}};
+
 					$("html").css({"background": "url(../photos/{{page.bg_image}}) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover", "background-color": "#333"});
 					$(".blurb-darkener").click(function(){
 						$(this).children("p", "h1", "h2").toggle("slow", function() {
