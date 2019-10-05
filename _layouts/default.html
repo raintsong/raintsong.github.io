@@ -13,7 +13,7 @@
 					var activeSite = "{{page.url}}";
 					console.log(activeSite);
 					if (activeSite.indexOf("writing") == -1) {
-						$("html").css({"background": "url(../photos/{{page.bg_image}}) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover", "background-color": "#333"});						
+						$("html").css({"background": "url({{ site.url }}/photos/{{page.bg_image}}) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover", "background-color": "#333"});						
 					}
 					else {
 						$("html").css("background-color", "#333");

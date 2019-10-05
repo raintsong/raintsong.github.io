@@ -2,6 +2,7 @@
 layout: post
 author: Rain
 theme: personal
+photo: travel_nepal_stream.jpg
 ---
 
 Inspired by Zen and the art of motorcycle maintenance:

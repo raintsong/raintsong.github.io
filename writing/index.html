@@ -8,9 +8,12 @@ bg_theme: light
 <ul class="listing">
   {% for post in site.posts %}
     <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt }}</p>
-      <p>...</p>
+    	{% if post.photo %}
+	    <img src="{{ site.url }}/photos/{{ post.photo }}">
+	    {% endif %}
+	    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+	    <p>{{ post.excerpt }}</p>
+	    <p>...</p>
     </li>
   {% endfor %}
 </ul>

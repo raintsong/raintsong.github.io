@@ -2,6 +2,7 @@
 layout: post
 author: Rain
 theme: travel
+photo: travel_nepaL_tsergori.jpg
 ---
 
 As the bus bounced and jolted into the sixth hour of the ride, I thought to myself: wow, the mountains are beautiful. The winding switchbacks, the scattered corrugated rooftops, and the infinite levels of terrace farms filled my vision. The bus trudged past slope after slope of myriad greens, from the yellowish rice paddies and wheat fields to the shadowy rhododendron and oak trees. The road had long before lost its paving and was reduced to a layer of dust over rocks, its width barely enough to fit two buses side-by-side with maybe six inches of wiggle room---we slowed many times to accommodate oncoming vehicles, many of which came so close that I could have leaned out the window and given the driver in the other car an encouraging pat on the shoulder.
@@ -19,6 +20,8 @@ A good chunk of the trekking experience for me was the feeling of being on a nev
 On the fourth day, we set out around 7:00 to climb Tsergo Ri, a peak that was listed on the map as being 4984 m tall. The easiest part of this hike was that we went with small daypacks instead of our full-size bags. The hardest part was the thin air, the feeling of constantly gasping, like someone is sucking the oxygen just out of your body's reach. I think we budgeted three hours to summit, but it took us four and a half. We crossed the tree line and into areas with remnants of snow. When we arrived at the top, we looked around to see mountains in every direction in their full sunlit glory. Later, looking at multiple references, I discovered that Tsergo Ri is frequently listed as being anywhere between 4900 and 5100 meters tall. Did we "truly experience the mountains?"
 
 Unclear, though being in the mountains for several days certainly provides one with a sense of perspective. Several sections of the trekking trail were built over rock debris left behind by landslides, some of which were caused by the 2015 earthquake. As we crossed the largest debris section, several hundred meters long, we looked at the cliff where the gashes in the mountain still shone bright like fresh wounds. Priyankar reminded me that the earthquake generated a landslide and avalanche that destroyed the entire village of Langtang. Over three years, the fallen ice has melted but the rocks still remain. We could still see the trees across the valley that were knocked over by the avalanche-generated winds. The new village of Langtang has been built upriver of the landslide, but the old village is still buried under the earth. Walking over the landslides and days later to the top of Tsergo Ri, I felt witness to the mountains in all of their imposing grandeur, their immensity flirting with the caprice of nature.
+
+![Tsergo Ri]({{site.url}}/photos/travel_nepal_tsergori.jpg)
 
 As we climbed down from Tsergo Ri, I stumbled over every patch of dirt and gravel, my knees feeling weak. Sitting on a boulder for a momentary gasp of air, I noticed someone farther down the trail, his nearly imperceptible silhouette framed by vast expanses of rock. I will never forget how small he and I both were.
 
