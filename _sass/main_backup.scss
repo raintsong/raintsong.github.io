@@ -1,9 +1,8 @@
 body {
     margin:0 auto;
     width: 67%;
-    color: #eee;
-    font-family: 'PT Serif', serif;
-    font-size: 1.2em;
+    color: #555;
+    font-family: 'Lato', sans-serif;
 }
 a {
     text-decoration: none;
@@ -22,14 +21,71 @@ header {
     transform: translate(-50%, 0);
 }
 
-nav {
-    font-family:'Open Sans', sans-serif;
-    font-weight: normal;
-    font-size: 2em;
+nav, footer {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-weight: bold;
 }
+@media (max-width: 40em) {
 
-nav {
-  float: left;
+    nav {
+        height: inherit;
+        right: 0em;
+        text-align: right;
+    }
+    nav a {
+        float: right;
+        display: block;
+        margin: 0.2em;
+        padding: 0.5em;
+        border-top: none;
+        border-right: 3px solid white;
+    }
+    .current {
+        border-right: 3px solid red;
+    }
+    .current:hover {
+        border-top: 0;
+        border-right: 3px solid red;
+    }
+}
+@media (min-width: 40em) {
+    nav {
+        overflow: hidden;
+        top: 0.1em;
+        padding: 0px;
+        list-style: none;
+        width: 26.5em;
+        margin: 0 auto;
+
+    }
+
+    nav a {
+        margin: auto;
+        border-top: 3px solid white;
+        text-align: center;
+        float: left;
+    }
+    nav a:hover {
+        border-top: 3px solid #999;
+
+    }
+    nav .nav-item {
+        padding: 1em 0.5em;
+    }
+    .current {
+        border-top: 3px solid red;
+    }
+    .current:hover {
+        border-top: 3px solid red;
+    }
+}
+@media (min-width: 60em) {
+    nav {
+        width: 38.5em;
+    }
+    nav .nav-item {
+        padding: 1em 1.5em;
+    }
 }
 
 .background_image {
@@ -37,10 +93,8 @@ nav {
 }
 
 .container{
-    float:right;
-    width: 66%;
-    border-left: 1em solid red;
-    padding: 0em 2em;
+    margin-top: 6.1em;
+    float:left;
 }
 
 .container ul {
@@ -52,12 +106,15 @@ nav a {
     color: #fff;
 }
 
+
+h1 {
+    font-size: 2em;
+    margin: 0 0.5em 0 0;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    display: inline;
+}
 .not-title {
     font-weight: normal;
-}
-h1 {
-  font-size: 2em;
-  display: inline;
 }
 h2 {
     font-size: 1.5em;
@@ -101,16 +158,13 @@ h1 a, h2 a {
 .blurb {
 }
 .blurb-darkener {
+    background-color: #225;
     padding: 1em;
     border-radius: 0em;
+    border-bottom: 2px solid #222;
 }
 .blurb-darkener:hover {
-    background-color: #322;
-    opacity: 0.5;
-}
-.blurb-spacer {
-  height: 2em;
-  width: 2em;
+    background-color: #2a2a5c;
 }
 p a {
     color: #aff;
