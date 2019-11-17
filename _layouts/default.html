@@ -4,6 +4,9 @@
 			<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" href="/assets/css/styles.css">
+
+
+			<link rel="shortcut icon" href="">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 			<script>
 				console.log("Hello World!");
@@ -19,11 +22,12 @@
 					else {
 						$("body").css("background-color", "#111");
 					}
-					$("#show").css({"display": "none"});
+
 
 
 					// This section of the script is for hiding and showing the page's text.
-					$(".blurb h1").click(function(){
+
+					$("#hide, #show").click(function(){
 						$(this).siblings("p", "h2").toggle("fast", function() {
 						//	$(".blurb-darkener").animate({
 						//		width: "100px",
@@ -38,6 +42,7 @@
 						$("#hide").toggle();
 						$("#show").toggle();
 						$(".body-darkener").fadeToggle();
+						$(".body-container").toggleClass("faded");
 					});
 
 
