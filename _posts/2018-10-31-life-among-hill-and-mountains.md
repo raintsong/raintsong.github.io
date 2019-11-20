@@ -2,7 +2,7 @@
 layout: post
 author: Rain
 theme: travel
-photo: travel_nepaL_tsergori.jpg
+photo: travel_nepal_tsergori.jpg
 ---
 
 As the bus bounced and jolted into the sixth hour of the ride, I thought to myself: wow, the mountains are beautiful. The winding switchbacks, the scattered corrugated rooftops, and the infinite levels of terrace farms filled my vision. The bus trudged past slope after slope of myriad greens, from the yellowish rice paddies and wheat fields to the shadowy rhododendron and oak trees. The road had long before lost its paving and was reduced to a layer of dust over rocks, its width barely enough to fit two buses side-by-side with maybe six inches of wiggle room---we slowed many times to accommodate oncoming vehicles, many of which came so close that I could have leaned out the window and given the driver in the other car an encouraging pat on the shoulder.

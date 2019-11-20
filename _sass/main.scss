@@ -130,16 +130,16 @@ h1 a, h2 a {
 p a {
     color: #faa;
 }
-#blurb-button {
-    height: 2em;
-    width: 2em;
-    background-color: red;
-    float: right;
-    border-radius: 1em;
-}
-#blurb-button:hover {
-    background-color: green;
-}
+// #blurb-button {
+//     height: 2em;
+//     width: 2em;
+//     background-color: red;
+//     float: right;
+//     border-radius: 1em;
+// }
+// #blurb-button:hover {
+//     background-color: green;
+// }
 
 
 
@@ -164,14 +164,9 @@ p a {
 .medgray {
     color: #666;
 }
-.medgray-border {
-    border-top: 3px solid #666;
-}
+
 nav .medgray:hover {
     color: #888;
-}
-nav .medgray-border:hover {
-    border-top: 3px solid #888;
 }
 
 

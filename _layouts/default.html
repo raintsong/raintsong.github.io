@@ -16,11 +16,19 @@
 					console.log("ready!");
 					var activeSite = "{{page.url}}";
 					console.log(activeSite);
+					var bgtheme = "{{page.bg_theme}}";
+					var black = "#000";
+					var darkgray = "#111";
+					var medgray = "#555";
+					var white = "#fff";
+					var navItems = $("nav a");
+
+
 					if (activeSite.indexOf("writing") == -1) {
-						$("body").css({"background": "url({{ site.url }}/photos/{{page.bg_image}}) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover", "background-color": "#333"});
+						$("body").css({"background": "url({{ site.url }}/photos/{{page.bg_image}}) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover", "background-color": darkgray});
 					}
 					else {
-						$("body").css("background-color", "#111");
+						$("body").css("background-color", darkgray);
 					}
 
 
@@ -47,28 +55,26 @@
 
 
 					// This section of the script is for picking the background color based on content/other variables.
-					var bgtheme = "{{page.bg_theme}}";
-					var black = "#000";
-					var darkgray = "#333";
-					var medgray = "#555";
-					var white = "#fff";
-					var navItems = $("nav a");
+
 
 					if (bgtheme == "light" || activeSite.indexOf("writing") >= 0) {
 						$("html").css({"background-color": "white"});
+						$(".body-darkener").hide();
 						$("h1, h2, .container a").addClass("darkgray");
 						$("p").addClass("medgray");
 
 						navItems.each(function() {
 							console.log($(this).hasClass("current"));
 							if ($(this).hasClass("current") == false) {
-								$(this).addClass("medgray medgray-border");
+								$(this).addClass("medgray");
 							}
 						});
 						console.log(bgtheme);
 					}
 					else if (bgtheme == "dark") {
-//						$("html").css({"background-color": "#333"});
+//					$("html").css({"background-color": "#333"});
+						$(".body-darkener").hide();
+
 						navItems.each(function() {
 
 						})
