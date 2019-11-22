@@ -104,15 +104,38 @@ h1 a, h2 a {
     position: relative;
     list-style: none;
     font-size: 1em;
-    padding: 0em 0em 0em 2em;
+    padding: 0em 0em;
     margin: 3em 1em;
     border-left: 3px solid gray;
-
 }
 
 .listing li:hover {
     border-left: 3px solid red;
 }
+
+.listing-img {
+  width: 20em;
+  display: inline-block;
+  padding: 0em 1em;
+  height: inherit;
+  // position: relative;
+}
+.listing-img img {
+  width: inherit;
+  // position: absolute;
+}
+.listing-text {
+  width: 20em;
+  float: right; //TEMPORARY SOLUTION> PLEASE FIX
+  // padding: 1em;
+  display: inline-block;
+}
+
+.listing-text-nophoto {
+  width: 44em;
+  padding: 2em;
+}
+
 
 #hide, #show {
   font-style: italic;

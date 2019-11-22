@@ -2,10 +2,11 @@
 layout: post
 author: Rain
 theme: travel
-photo: travel_nepal_prayerwheel.jpg
----
+photo: travel_nepal_prayerwheel
+excerpt_separator: <!--more-->
 
-I think the only time we ever had a Christmas tree in the house was when I was six. I remember that it shed a lot of needles. It probably smelled coniferous. It was one of those decisions that my parents made on a whim, because that's what other people do, and wouldn't it be fun to pretend to be like other people? We placed presents under the tree, like we did every year. But every other Christmas in my memory, we had to substitute for European/American tradition: a paper tree with cut-out diatom images as ornaments, which my mom found at work; the baby grand piano that left plenty of room for presents underneath; sometimes, simply the lights draped on the walls.
+---
+I think the only time we ever had a Christmas tree in the house was when I was six.<!--more--> I remember that it shed a lot of needles. It probably smelled coniferous. It was one of those decisions that my parents made on a whim, because that's what other people do, and wouldn't it be fun to pretend to be like other people? We placed presents under the tree, like we did every year. But every other Christmas in my memory, we had to substitute for European/American tradition: a paper tree with cut-out diatom images as ornaments, which my mom found at work; the baby grand piano that left plenty of room for presents underneath; sometimes, simply the lights draped on the walls.
 
 The way in which we celebrate holidays has always been eternally transforming. For a couple of years, we had barbecues on Fourth of July and then watched fireworks from the back deck. When I was in high school, my mom started making niangao (年糕) in the time of the new year, Gregorian or Chinese lunar. All of these activities were wonderful while they lasted, though indeed all of them came gradually to an end. As such, I have never come to really know an annual tradition. We simply always did things differently; in this sense my family was anti-traditional.
 
