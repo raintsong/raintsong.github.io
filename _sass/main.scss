@@ -8,6 +8,38 @@ $lightpages: #faf, #aff;
 
 
 
+//CSS FOR THE WHOLE WEBSITE
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.underlined {
+  text-decoration: underline;
+}
+img {
+  width: 100%; //note that if you take this out, then writing page gets messed up
+}
+h1 {
+  font-size: 2em;
+  display: inline;
+}
+h2 {
+    font-size: 1.5em;
+    font-family:'Open Sans', 'Sans-Serif';
+}
+p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    color: #eee;
+}
+p a {
+    color: #faa;
+}
+
+
+
 body {
   margin: 0;
 }
@@ -38,27 +70,6 @@ body {
   opacity: 1;
 }
 
-a {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-.underlined {
-  text-decoration: underline;
-}
-
-img {
-    width: 100%;
-}
-// header {
-//     height: 10%;
-//     width: 75%;
-//     position: fixed;
-//     left: 50%;
-//     transform: translate(-50%, 0);
-// }
-
 nav {
     font-family:'Open Sans', sans-serif;
     font-weight: normal;
@@ -67,12 +78,13 @@ nav {
     float: left;
 
 }
-
-
-.background_image {
-    display:none;
+nav a {
+    display: inline;
+    color: #fff;
 }
-
+.current {
+    color: red;
+}
 
 
 .container{
@@ -82,82 +94,11 @@ nav {
     padding: 1em 2em;
 }
 
+
+//for bg_theme: neutral
 .container ul {
     list-style: none;
 }
-
-nav a {
-    display: inline;
-    color: #fff;
-}
-
-.not-title {
-    font-weight: normal;
-}
-h1 {
-  font-size: 2em;
-  display: inline;
-}
-h2 {
-    font-size: 1.5em;
-    font-family:'Open Sans', 'Sans-Serif';
-}
-p {
-    font-size: 1.2em;
-    line-height: 1.5em;
-    color: #eee;
-}
-
-
-.listing {
-    margin: 0;
-    padding: 0;
-}
-/**
-.listing li img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -3;
-}
-**/
-.listing li {
-    position: relative;
-    list-style: none;
-    font-size: 1em;
-    padding: 0em 0em;
-    margin: 3em 0em;
-    background-color: #111;
-}
-
-// .listing li:hover {
-//     border-left: 3px solid red;
-// }
-
-.listing-img {
-  display: inline-block;
-  // position: relative;
-}
-.listing-img img {
-  // position: absolute;
-  opacity: 0.7;
-}
-.post-darkener {
-  height: inherit;
-  width: inherit;
-  background-color: #000;
-}
-.listing-text {
-  top: 0;
-  color: #fff;
-  padding: 1em;
-  position: absolute;
-}
-
-.no-img {
-  background-color: #000;
-}
-
 
 #hide, #show {
   font-style: italic;
@@ -172,20 +113,45 @@ p {
 .blurb {
   padding: 2em 0em 0em 0em;
 }
-p a {
-    color: #faa;
-}
-// #blurb-button {
-//     height: 2em;
-//     width: 2em;
-//     background-color: red;
-//     float: right;
-//     border-radius: 1em;
-// }
-// #blurb-button:hover {
-//     background-color: green;
-// }
 
+
+
+
+//for writing/index.html
+.listing {
+    margin: 0;
+    padding: 0;
+}
+.listing li {
+    position: relative;
+    list-style: none;
+    font-size: 1em;
+    padding: 0em 0em;
+    margin: 3em 0em;
+    background-color: #111;
+}
+.listing-img {
+  display: inline-block;
+}
+.listing-img img {
+  opacity: 0.7;
+}
+.post-darkener {
+  height: inherit;
+  width: inherit;
+  background-color: #000;
+}
+.listing-text {
+  top: 0;
+  color: #fff;
+  padding: 1em;
+  position: absolute;
+}
+.no-img {
+  background-color: #000;
+}
+
+//for writing-nav.html
 .writing-nav {
   margin: 0;
   padding: 0;
@@ -198,24 +164,12 @@ p a {
 
 
 
-
-
-.current {
-    color: red;
-}
-
 .darkgray {
     color: #333;
 }
 .medgray {
     color: #666;
 }
-
-nav .medgray:hover {
-    color: #888;
-}
-
-
 .light {
     color: #fff;
 }

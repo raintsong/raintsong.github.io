@@ -14,23 +14,19 @@
 			<script>
 				console.log("Hello World!");
 
-				// This section of the script is for the background image.
 				$(document).ready(function() {
-					console.log("ready!");
+					console.log("Document ready!");
 					var activeSite = "{{page.url}}";
 					console.log(activeSite);
 					var bgtheme = "{{page.bg_theme}}";
-					var black = "#000";
-					var darkgray = "#111";
-					var medgray = "#555";
-					var white = "#fff";
 					var navItems = $("nav a");
 
 
 					//Background Image
 
 					if (activeSite.indexOf("writing") == -1) {
-						$("body").css({"background": "url({{ site.url }}/photos/{{page.bg_image}}) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover", "background-color": darkgray});
+						$("body").css({"background": "url({{ site.url }}/photos/{{page.bg_image}}) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover"});
+						$("body").addClass("darkgray");
 					}
 
 
@@ -39,17 +35,7 @@
 					// Hide and Show buttons to hide or show background image
 
 					$("#hide, #show").click(function(){
-						$(this).siblings("p", "h2").toggle("fast", function() {
-						//	$(".blurb-darkener").animate({
-						//		width: "100px",
-						//		height: "100px"
-						//	}, 500);
-						//}, function() {
-						//	$(".blurb-darkener").animate({
-						//		width: "500px",
-						//		height: "500px"
-						//	}, 500)
-						});
+						$(this).siblings("p", "h2").toggle("fast");
 						$("#hide").toggle();
 						$("#show").toggle();
 						$(".body-darkener").fadeToggle();
@@ -57,49 +43,16 @@
 					});
 
 
-					navItems.each(function() {
-						console.log($(this).hasClass("current"));
-						if ($(this).hasClass("current") == false) {
-						}
-					});
-					console.log(bgtheme);
 
-					// This section of the script is for picking the background color based on content/other variables.
-					console.log(bgtheme);
-					console.log("{{page.title}}");
-					if (bgtheme == "light" || activeSite.indexOf("writing") >= 0) {
-						// $("body").addClass("bg-light");
-						// console.log("bg-light");
-						// $("html").css({"background-color": "white"});
-						// $(".container").children("h1, p, a, .post p").addClass("darkgray");
-						// $("h1, h2, .container a").addClass("darkgray");
-						// $("p").addClass("medgray");
+					// This section of the script is for turning the listing li into links.
 
-
-					}
-					else if (bgtheme == "dark") {
-						console.log("this dark else if is working");
-//					$("html").css({"background-color": "#333"});
-						// $("body").addClass("bg-dark");
-						$(".body-darkener").hide();
-
-						navItems.each(function() {
-
-						})
-					}
-					else {
-						// $("body").addClass("bg-neutral");
-					}
 					var postInIndex = $(".listing li");
 					postInIndex.hover(function() {
 						window.status = $(this).find("a:first").attr("href");
-						// $(this).children("h2").removeClass("darkgray").css({"text-decoration": "underline"});
-						// console.log("wassup its the postinindex");
-						$(this).find("a:last").addClass("underlined");
+						$(this).find("a:first").addClass("underlined");
 				    }, function () {
 				        window.status = "";
-						// $(this).children("h2").addClass("darkgray").css({"text-decoration": "none"});
-						$(this).find("a:last").removeClass("underlined");
+						$(this).find("a:first").removeClass("underlined");
 
 
 				    });
@@ -109,6 +62,21 @@
 					});
 				});
 
+
+
+
+
+
+				// Test script for "current" class
+
+				// navItems.each(function() {
+				// 	console.log($(this).hasClass("current"));
+				// 	if ($(this).hasClass("current") == false) {
+				// 	}
+				// });
+
+
+			
 			</script>
 
 
