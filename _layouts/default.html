@@ -4,7 +4,10 @@
 			<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" href="/assets/css/styles.css">
-
+			{% if page.bg_theme == 'light' %}
+			<!--how do comments work-->
+			<link rel="stylesheet" href="/assets/css/styles_light.css">
+			{% endif %}
 
 			<link rel="shortcut icon" href="">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -24,16 +27,16 @@
 					var navItems = $("nav a");
 
 
+					//Background Image
+
 					if (activeSite.indexOf("writing") == -1) {
 						$("body").css({"background": "url({{ site.url }}/photos/{{page.bg_image}}) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover", "background-color": darkgray});
 					}
-					else {
-						$("body").css("background-color", darkgray);
-					}
 
 
 
-					// This section of the script is for hiding and showing the page's text.
+
+					// Hide and Show buttons to hide or show background image
 
 					$("#hide, #show").click(function(){
 						$(this).siblings("p", "h2").toggle("fast", function() {
@@ -54,40 +57,50 @@
 					});
 
 
+					navItems.each(function() {
+						console.log($(this).hasClass("current"));
+						if ($(this).hasClass("current") == false) {
+						}
+					});
+					console.log(bgtheme);
+
 					// This section of the script is for picking the background color based on content/other variables.
-
-
+					console.log(bgtheme);
+					console.log("{{page.title}}");
 					if (bgtheme == "light" || activeSite.indexOf("writing") >= 0) {
-						$("html").css({"background-color": "white"});
-						$(".body-darkener").hide();
-						$("h1, h2, .container a").addClass("darkgray");
-						$("p").addClass("medgray");
+						// $("body").addClass("bg-light");
+						// console.log("bg-light");
+						// $("html").css({"background-color": "white"});
+						// $(".container").children("h1, p, a, .post p").addClass("darkgray");
+						// $("h1, h2, .container a").addClass("darkgray");
+						// $("p").addClass("medgray");
 
-						navItems.each(function() {
-							console.log($(this).hasClass("current"));
-							if ($(this).hasClass("current") == false) {
-								$(this).addClass("medgray");
-							}
-						});
-						console.log(bgtheme);
+
 					}
 					else if (bgtheme == "dark") {
+						console.log("this dark else if is working");
 //					$("html").css({"background-color": "#333"});
+						// $("body").addClass("bg-dark");
 						$(".body-darkener").hide();
 
 						navItems.each(function() {
 
 						})
 					}
+					else {
+						// $("body").addClass("bg-neutral");
+					}
 					var postInIndex = $(".listing li");
 					postInIndex.hover(function() {
 						window.status = $(this).find("a:first").attr("href");
-						$(this).children("h2").removeClass("darkgray").css({"text-decoration": "underline"});
-						$(this).find("p:last").css({"color": "red"});
+						// $(this).children("h2").removeClass("darkgray").css({"text-decoration": "underline"});
+						// console.log("wassup its the postinindex");
+						$(this).find("a:last").addClass("underlined");
 				    }, function () {
 				        window.status = "";
-						$(this).children("h2").addClass("darkgray").css({"text-decoration": "none"});
-						$(this).find("p:last").css({"color": medgray});
+						// $(this).children("h2").addClass("darkgray").css({"text-decoration": "none"});
+						$(this).find("a:last").removeClass("underlined");
+
 
 				    });
 					postInIndex.click(function() {
@@ -95,7 +108,7 @@
 				        return false;
 					});
 				});
-				console.log("Goodbye world.");
+
 			</script>
 
 

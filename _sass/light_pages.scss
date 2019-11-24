@@ -1,0 +1,32 @@
+//light pages
+$darkgray: #111;
+$medgray: #444;
+$white: #fff;
+
+
+@mixin color-choice($color) {
+	color: $color;
+}
+
+body {
+	background-color: #fff;
+}
+nav a, h1 a, h2 a {
+	@include color-choice($medgray);
+}
+h1, h2 {
+	@include color-choice($darkgray);
+}
+
+p {
+	@include color-choice($medgray);
+}
+.listing-text h2 a {
+    color: #eee;
+}
+.listing-text p {
+	@include color-choice($white);
+}
+.body-darkener {
+	display:none;
+}

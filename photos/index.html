@@ -4,6 +4,8 @@ bg_theme: dark
 ---
 {% for image in site.static_files %}
 	{% if image.path contains 'photos' %}
+		{% if image.path contains '100kb' %} <!--note: if you change your mind about which photo to load first, then use "unless" here instead of "if" (and "endunless")-->
 		<img src="{{site.baseurl}}{{image.path}}" alt ="image">
+		{% endif %}
 	{% endif %}
 {% endfor %}
