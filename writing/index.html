@@ -9,27 +9,6 @@ bg_theme: light
  -->
  <ul class="listing">
   {% for post in site.posts %}
-<<<<<<< HEAD
-    <li>
-    	{% if post.photo %}
-      <div class="listing-img">
-        <img src="{{ site.url }}/photos/100-kb/{{ post.photo }}_100kb.jpg">
-      </div>
-      <div class="listing-text">
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  	    <p>{{ post.excerpt }}</p>
-  	    <p>...</p>
-      </div>
-	    {% else %}
-      <div class="listing-text-nophoto">
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-  	    <p>{{ post.excerpt }}</p>
-  	    <p>...</p>
-      </div>
-      {% endif %}
-    </li>
-=======
     {% include post-listing.html %}
->>>>>>> 8b7a4c1211c58b96a7ce95f2d4e52e2adaaddd40
   {% endfor %}
 </ul>
