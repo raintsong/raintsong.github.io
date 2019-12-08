@@ -2,8 +2,12 @@
 title: Photography
 bg_theme: dark
 ---
+<ul>
 {% for image in site.static_files %}
-	{% if image.path contains 'photos' %}
-		<img src="{{site.baseurl}}{{image.path}}" alt ="image">
+	{% if image.path contains 'photos/100-kb' %}
+		<li>
+			<img src="{{site.baseurl}}{{image.path}}" alt ="image">
+		</li>
 	{% endif %}
 {% endfor %}
+</ul>
