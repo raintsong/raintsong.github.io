@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 	<html>
 		<head>
+			<link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl | prepend: site.url }}" />
 			<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" href="/assets/css/styles.css">
@@ -21,12 +22,12 @@
 					var bgtheme = "{{page.bg_theme}}";
 					var navItems = $("nav a");
 
-
+					// Set background image to as designated in the Liquid front matter.
 					if (activeSite.indexOf("writing") == -1 && activeSite.indexOf("photos")==-1) {
-						$("body").css({"background": "url({{ site.url }}/photos/quarter-size/{{page.bg_image}}_quarter.jpg) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover", "background-color": darkgray});
+						$("body").css({"background": "url({{ site.url }}/photos/quarter-size/{{page.bg_image}}_quarter.jpg) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover"});
 					}
 					else {
-						$("body").addClass("darkgray");
+						$("body").css("background", "#111111");
 					}
 
 

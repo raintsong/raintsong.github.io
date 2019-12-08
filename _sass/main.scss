@@ -131,20 +131,22 @@ nav a {
     background-color: #111;
 }
 .listing-img {
-  display: inline-block;
+  margin: 0;
+  padding: 0;
+  // display: inline-block;
 }
 .listing-img img {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 .post-darkener {
-  height: inherit;
-  width: inherit;
+  // height: inherit;
+  // width: inherit;
   background-color: #000;
 }
 .listing-text {
   top: 0;
   color: #fff;
-  padding: 1em;
+  padding: 2em;
   position: absolute;
 }
 .no-img {
@@ -173,4 +175,3 @@ nav a {
 .light {
     color: #fff;
 }
-
