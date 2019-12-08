@@ -4,10 +4,17 @@ bg_theme: dark
 ---
 <ul>
 {% for image in site.static_files %}
+<<<<<<< HEAD
 	{% if image.path contains 'photos/100-kb' %}
 		<li>
 			<img src="{{site.baseurl}}{{image.path}}" alt ="image">
 		</li>
+=======
+	{% if image.path contains 'photos' %}
+		{% if image.path contains '100kb' %} <!--note: if you change your mind about which photo to load first, then use "unless" here instead of "if" (and "endunless")-->
+		<img src="{{site.baseurl}}{{image.path}}" alt ="image">
+		{% endif %}
+>>>>>>> 8b7a4c1211c58b96a7ce95f2d4e52e2adaaddd40
 	{% endif %}
 {% endfor %}
 </ul>

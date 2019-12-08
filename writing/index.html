@@ -2,12 +2,14 @@
 layout: default
 title: Writing
 bg_theme: light
-excerpt_separator: .
 ---
 <h1>Latest Posts</h1>
-<h1 class="not-title"><a href="themes.html">Organized by theme</a></h1>
-<ul class="listing">
+{% include writing-nav.html %}
+<!-- <h1 class="not-title"><a href="themes.html">Organized by theme</a></h1>
+ -->
+ <ul class="listing">
   {% for post in site.posts %}
+<<<<<<< HEAD
     <li>
     	{% if post.photo %}
       <div class="listing-img">
@@ -26,5 +28,8 @@ excerpt_separator: .
       </div>
       {% endif %}
     </li>
+=======
+    {% include post-listing.html %}
+>>>>>>> 8b7a4c1211c58b96a7ce95f2d4e52e2adaaddd40
   {% endfor %}
 </ul>

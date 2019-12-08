@@ -1,0 +1,20 @@
+    <li>
+    	{% if post.photo %}
+        <div class="listing-img">
+          <img src="{{ site.url }}/photos/{{ post.photo }}_100kb.jpg">
+        </div>
+
+        <div class="listing-text">
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    	    <p>{{ post.excerpt }}</p>
+    	    <p>...</p>
+        </div>
+  	    
+      {% else %}
+        <div class="listing-text no-img">
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <p>{{ post.excerpt }}</p>
+          <p>...</p>
+        </div>
+      {% endif %}
+    </li>
