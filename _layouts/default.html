@@ -26,8 +26,8 @@
 					if (activeSite.indexOf("writing") == -1 && activeSite.indexOf("photos")==-1) {
 						$("body").css({"background": "url({{ site.url }}/photos/quarter-size/{{page.bg_image}}_quarter.jpg) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover"});
 					}
-					else {
-						$("body").css("background", "#111111");
+					else if (activeSite.indexOf("writing") != -1) {
+						$("body").css("background", "#ffffff");
 					}
 
 
