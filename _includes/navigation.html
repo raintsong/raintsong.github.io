@@ -1,5 +1,15 @@
+
+
+			
+			<div class="nav-logo rotatable"><img src="../assets/images/website-logo-rd1-01.png"></div>
+			
 			<nav>
 				{% for item in site.data.navigation %}
 					<a href="{{item.link}}" {% if page.url contains item.link %} class="current" {% endif %}><div class="nav-item">{{ item.name }}</div></a>
 				{% endfor %}
+
+			<div class="nav-exit">
+				<p>^</p>
+			</div>
+			
 			</nav>

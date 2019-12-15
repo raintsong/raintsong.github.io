@@ -8,6 +8,8 @@
 			{% if page.bg_theme == 'light' %}
 			<!--how do comments work-->
 			<link rel="stylesheet" href="/assets/css/styles_light.css">
+			{% elsif page.bg_theme == 'dark' %}
+			<link rel="stylesheet" href="/assets/css/styles_dark.css">
 			{% endif %}
 
 			<link rel="shortcut icon" href="">
@@ -23,11 +25,11 @@
 					var navItems = $("nav a");
 
 					// Set background image to as designated in the Liquid front matter.
+					// Logic: if the site is NOT in /writing or /photos, then set a background photo
+					// Otherwise, the background color will be set depending on the Liquid above in the stylesheet links
+
 					if (activeSite.indexOf("writing") == -1 && activeSite.indexOf("photos")==-1) {
 						$("body").css({"background": "url({{ site.url }}/photos/quarter-size/{{page.bg_image}}_quarter.jpg) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover"});
-					}
-					else if (activeSite.indexOf("writing") != -1) {
-						$("body").css("background", "#ffffff");
 					}
 
 
@@ -64,6 +66,22 @@
 				});
 
 
+				// I was testing dynamically loading the logo but I gave up
+				// var windowSize = window.innerWidth;
+				// var navLogoImg = $(".nav-logo img");
+				// if(windowSize >= 640){
+				// 	navLogoImg.attr("src","../assets/images/website-logo-rd1-01.png")
+				// 	console.log("part one!");
+				// }
+				// if (windowSize <= 640 && windowSize >= 360) {
+				// 	$(".nav-logo img").attr("src","../assets/images/website-logo-rd1-01-rotate.png");
+				// 	console.log("option two!");
+				// }
+				// if(windowSize < 360){
+				// 	navLogoImg.attr("src","../assets/images/website-logo-rd1-01-rotate.png")
+				// }
+				// console.log(windowSize);
+				// console.log(navLogoImg.attr("src"));
 
 
 
