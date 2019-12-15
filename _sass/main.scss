@@ -36,8 +36,12 @@ body {
 }
 
 
-
 //CSS FOR THE WHOLE WEBSITE
+
+img {
+  display: block;
+}
+
 a {
     text-decoration: none;
 }
@@ -92,6 +96,11 @@ body {
     position: relative;
     -webkit-transition: opacity 100ms linear;
     transition: opacity 100ms linear;
+}
+
+
+nav a {
+    color: #fff;
 }
 
 //.faded is to set the values for the Hide and Show buttons in layouts/default.html
@@ -177,11 +186,17 @@ body {
   .nav-logo {
     padding: 0%;
     background-color: black;
-    padding: 1%;
-    margin-top: 10%;
+    padding: 5%;
+    margin-top: 3em;
+    border-radius: 0.5em;
+  }
+  nav {
+    margin-top: 0.5em;
   }
   nav a {
-    margin: 0;
+    padding: 0.2em;
+    display: block;
+    text-align: right;
   }
 
   .nav-exit {
@@ -194,15 +209,17 @@ body {
 }
 
 
+
+// Need to figure out everything below
+
+
 nav {
     font-family: var(--main-sans-serif), sans-serif;
     font-weight: normal;
     font-size: 2em;
 
 }
-nav a {
-    color: #fff;
-}
+
 .current {
     color: red;
 }
