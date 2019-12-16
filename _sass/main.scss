@@ -33,6 +33,7 @@
 
 body {
   --main-sans-serif: 'ostrich_sansmedium';
+  --heavy-sans-serif: 'ostrich_sansheavy';
 }
 
 
@@ -59,8 +60,9 @@ h1 {
   display: inline;
 }
 h2 {
-    font-size: 1.5em;
-    font-family: var(--main-sans-serif), 'Sans-Serif';
+    // font-size: 2em; set by screen size
+    font-family: var(--heavy-sans-serif), 'Sans-Serif';
+    font-weight: normal;
 }
 p {
     font-size: 1.2em;
@@ -117,6 +119,9 @@ nav a {
 //Section for screen size queries
 
 @media only screen and (max-width: 640px) {
+  h2 {
+    font-size: 1.5em;
+  }
   .rotatable {
     -webkit-transform:rotate(270deg);
     -moz-transform: rotate(270deg);
@@ -171,6 +176,9 @@ nav a {
 }
 
 @media only screen and (min-width: 641px) {
+  h2 {
+    font-size: 2em;
+  }
   body {
     font-size: 18px;
   }
@@ -205,6 +213,7 @@ nav a {
   .container {
     float: right;
     width: 70%;
+    margin-top: 3em;
   }
 }
 
@@ -258,6 +267,7 @@ nav {
 //for writing/index.html
 .listing {
     margin: 0;
+    margin-bottom: 3em;
     padding: 0;
 }
 .listing li {
