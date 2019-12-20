@@ -35,18 +35,61 @@
 
 
 
-					// Hide and Show buttons to hide or show background image
+					// Expose or cover background image
+					var fullFaded = 0.3;
+					var partialFaded = 0.7;
+					var fadeTime = 200;
+					if (bgtheme == "") {
+						var isFaded = false;
+						$("nav .container").addClass("faded");
 
-					$("#hide, #show").click(function(){
-						$(this).siblings("p", "h2").toggle("fast");
-						$("#hide").toggle();
-						$("#show").toggle();
-						$(".body-darkener").fadeToggle();
-						$(".body-container").toggleClass("faded");
-						$("nav").fadeToggle();
-					});
-
-
+						// The first section is for when you click the text; set isFaded and then restore to full opacity if needed
+						$(".container").click(function(){
+							// $(this).siblings("p", "h2").toggle("fast");
+							// $("#hide").toggle();
+							// $("#show").toggle();
+							$(".body-darkener").fadeToggle();
+							$(".image-desc").fadeToggle(fadeTime);
+							isFaded = !isFaded;
+							if (isFaded == false) {
+								$("nav, .container").animate({opacity: 1.0}, fadeTime);
+								console.log($("nav").css("opacity"), 1.0);
+							}
+						});
+						// The second section is for when you click .body-darkener; set isFaded and then fade the nav and container
+						$(".body-darkener").click(function(){
+							// $(this).siblings("p", "h2").toggle("fast");
+							// $("#hide").toggle();
+							// $("#show").toggle();
+							$(".body-darkener").fadeToggle();
+							$(".image-desc").fadeToggle(fadeTime);
+							isFaded = !isFaded;
+							if (isFaded == true) {
+								$("nav, .container").animate({opacity: fullFaded}, fadeTime);
+							}
+						});
+						// The third section is for the hover effect.
+						$("nav, .container").hover(function() {
+							if (isFaded == true) {
+								$("nav, .container").animate({opacity: 1}, fadeTime);
+								console.log("unfaded!");
+							}
+							}, function() {
+							if (isFaded == true) {
+								$("nav, .container").animate({opacity: fullFaded}, fadeTime);
+								console.log("faded again.");
+							}
+						});
+						// This is if I want the .image-desc to have the fading feature. Makes people more likely to hover I think
+						$(".image-desc").hover(function() {
+							// $(this).animate({opacity: 1}, fadeTime);
+							$("nav, .container, .nav-logo").fadeToggle();
+						}, function() {
+							// $(this).animate({opacity: partialFaded}, fadeTime);
+							$("nav, .container, .nav-logo").fadeToggle();
+						})							
+					}
+				
 
 					// This section of the script is for turning the listing li into links.
 
@@ -116,6 +159,13 @@
 				{{ content }}
 
 				</div><!-- /.container -->
+
+				{% if page.bg_image %}
+				<div class="image-desc">
+					<h3>{{page.bg_image_desc}}</h3>
+					<h3>By {{page.bg_image_attr}}</h3>
+				</div>
+				{% endif %}
 			</div>
 		</body>
 	</html>
