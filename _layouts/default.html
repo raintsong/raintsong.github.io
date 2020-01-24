@@ -137,6 +137,26 @@
 				// 	if ($(this).hasClass("current") == false) {
 				// 	}
 				// });
+				var breakpoint1 = window.matchMedia( "(min-width: 641px)" );
+				var navLogoImg = $("#logo-img");				
+
+
+				$(function () {
+					function whichLogo() {
+						if (breakpoint1.matches) {
+						    	$("#logo-img").attr("src", "../assets/images/website-logo-rd1-01.png");
+						    	console.log("image is normal");
+						    	console.log($("#logo-img").attr('src'));
+						} else {
+						    	$("#logo-img").attr("src", "../assets/images/website-logo-rd1-01-rotate.png");
+								console.log("image was rotated");
+						    	console.log($("#logo-img").attr('src'));
+						}
+					}
+					whichLogo(); // Call listener function at run time
+					breakpoint1.addListener(whichLogo); // Attach listener function on state changes 
+				})
+
 
 
 
