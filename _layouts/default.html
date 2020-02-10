@@ -137,19 +137,23 @@
 				// 	if ($(this).hasClass("current") == false) {
 				// 	}
 				// });
-				var breakpoint1 = window.matchMedia( "(min-width: 641px)" );
+
+
+
+				// SCRIPT FOR ROTATING LOGO IMG				
+				var breakpoint1 = window.matchMedia( "(min-width: 801px)" );
 				var navLogoImg = $("#logo-img");				
 
 
 				$(function () {
 					function whichLogo() {
 						if (breakpoint1.matches) {
-						    	$("#logo-img").attr("src", "../assets/images/website-logo-rd1-01.png");
-						    	console.log("image is normal");
+						    	$("#logo-img").attr("src", "../assets/images/website-logo-rd1-long-01.png");
+						    	console.log("image is short");
 						    	console.log($("#logo-img").attr('src'));
 						} else {
-						    	$("#logo-img").attr("src", "../assets/images/website-logo-rd1-01-rotate.png");
-								console.log("image was rotated");
+						    	$("#logo-img").attr("src", "../assets/images/website-logo-rd1-01.png");
+								console.log("image is long");
 						    	console.log($("#logo-img").attr('src'));
 						}
 					}
@@ -166,6 +170,8 @@
 			<!-- links to fonts below-->
 			<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 			<link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Serif&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=PT+Sans|Patua+One&display=swap" rel="stylesheet">
+
 		</head>
 		<body>
 			<div class="body-darkener">
@@ -174,7 +180,7 @@
 				<header>
 					{% include navigation.html %}
 				</header>
-				<div class="container">
+				<div class="content-container">
 
 				{{ content }}
 

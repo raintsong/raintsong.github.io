@@ -1,12 +1,12 @@
-- name: Home
+- name: home
   link: /home/
-- name: About
+- name: about
   link: /about/
-- name: CV
+- name: cv
   link: /cv/
-- name: Writing
+- name: writing
   link: /writing/
-- name: Photos
+- name: photos
   link: /photos/
-- name: Contact
+- name: contact
   link: /contact/
