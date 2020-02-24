@@ -32,8 +32,25 @@
 						$("body").css({"background": "url({{ site.url }}/photos/quarter-size/{{page.bg_image}}_quarter.jpg) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover"});
 					}
 
+					// SCRIPT for showing and hiding nav on mobile
+					$(function () {
+						function toggleNav() {
+						}
+					});
+					$(".nav-opener").click(function() {
+						console.log("the nav is slidin'!");
+						$("nav").slideToggle();
+
+					});
 
 
+					// SCRIPT for fading the color of the hamburger
+					$("#hamburger").hover(function() {
+						console.log("nav opener button");
+						$("#nav-opener-button").css("background-color", "#ff3333");
+					}, function() {
+						$("#nav-opener-button").css("background-color", "red");
+					});
 
 					// Expose or cover background image
 					var fullFaded = 0.3;
@@ -87,9 +104,9 @@
 						}, function() {
 							// $(this).animate({opacity: partialFaded}, fadeTime);
 							$("nav, .container, .nav-logo").fadeToggle();
-						})							
+						})
 					}
-				
+
 
 					// This section of the script is for turning the listing li into links.
 
@@ -107,27 +124,24 @@
 				        window.location = $(this).find("a:first").attr("href");
 				        return false;
 					});
-				});
 
-
-				// I was testing dynamically loading the logo but I gave up
-				// var windowSize = window.innerWidth;
-				// var navLogoImg = $(".nav-logo img");
-				// if(windowSize >= 640){
-				// 	navLogoImg.attr("src","../assets/images/website-logo-rd1-01.png")
-				// 	console.log("part one!");
-				// }
-				// if (windowSize <= 640 && windowSize >= 360) {
-				// 	$(".nav-logo img").attr("src","../assets/images/website-logo-rd1-01-rotate.png");
-				// 	console.log("option two!");
-				// }
-				// if(windowSize < 360){
-				// 	navLogoImg.attr("src","../assets/images/website-logo-rd1-01-rotate.png")
-				// }
-				// console.log(windowSize);
-				// console.log(navLogoImg.attr("src"));
-
-
+				//attempt to rotate menu hamburger but I gave up 2020/02/23
+				// (function(document){
+				//   var div = document.getElementById('nav-opener-button');
+				//   var icon = document.getElementById('hamburger');
+				// 	console.log(icon);
+				//   var open = false;
+				//
+				//   div.addEventListener('click', function(){
+				//     if(open){
+				//       icon.className = 'fa fa-arrow-down';
+				//     } else{
+				//       icon.className = 'fa fa-arrow-down open';
+				//     }
+				//
+				//     open = !open;
+				//   });
+				// })(document);
 
 
 				// Test script for "current" class
@@ -140,28 +154,38 @@
 
 
 
-				// SCRIPT FOR ROTATING LOGO IMG				
-				var breakpoint1 = window.matchMedia( "(min-width: 801px)" );
-				var navLogoImg = $("#logo-img");				
+		})
+			// SCRIPT FOR dynamically loading LOGO IMG
+				var breakpoint1 = window.matchMedia( "(min-width: 600px)" );
+				var navLogoImg = ".logo-img";
 
 
 				$(function () {
 					function whichLogo() {
 						if (breakpoint1.matches) {
-						    	$("#logo-img").attr("src", "../assets/images/website-logo-rd1-long-01.png");
-						    	console.log("image is short");
-						    	console.log($("#logo-img").attr('src'));
+						    	$(navLogoImg).attr("src", "../assets/images/website-logo-rd1-long-01.png");
+						    	console.log("image is long");
+									var dispwithpx = $(".real-header").css("height");
+									console.log(dispwithpx);
+
 						} else {
-						    	$("#logo-img").attr("src", "../assets/images/website-logo-rd1-01.png");
-								console.log("image is long");
-						    	console.log($("#logo-img").attr('src'));
+						    	$(navLogoImg).attr("src", "../assets/images/website-logo-rd1-01.png");
+								console.log("image is short");
+								var dispwithpx = $(".real-header").css("height");
+								console.log(dispwithpx);
+
 						}
+						var displacement = $(".real-header").height();
+						$("nav").css("top", dispwithpx);
+						console.log(dispwithpx);
+						$("nav").css("height",$(window).height()-displacement);
 					}
 					whichLogo(); // Call listener function at run time
-					breakpoint1.addListener(whichLogo); // Attach listener function on state changes 
+					breakpoint1.addListener(whichLogo); // Attach listener function on state changes
+
+
+				// SCRIPT for moving the fixed nav in relation to the fixed logo area, attempt #1
 				})
-
-
 
 
 			</script>
@@ -177,7 +201,10 @@
 			<div class="body-darkener">
 			</div>
 			<div class="body-container">
-				<header>
+				<header class="real-header">
+					{% include navigation.html %}
+				</header>
+				<header class="spacer">
 					{% include navigation.html %}
 				</header>
 				<div class="content-container">
