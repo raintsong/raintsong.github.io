@@ -1,16 +1,22 @@
+ <nav class="navbar navbar-expand-md bg-light navbar-light">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#"><img src="../assets/images/website-logo-rd1-long-01.png" alt="Logo" style="width: 10em"></a>
 
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-			<div class="top-container">
-				<div class="nav-logo"><a href="/home/"><img class="logo-img" src="../assets/images/website-logo-rd1-01.png"></a></div>
-				<div class="nav-opener"><div id="nav-opener-button" class="nav-opener-buttons"><img id="hamburger" src="../assets/images/menu-button.png"></div></div>
-				<nav>
-					{% for item in site.data.navigation %}
-						<a href="{{item.link}}" {% if page.url contains item.link %} class="current" {% endif %}><div class="nav-item"><h4>{{ item.name }}</h4></div></a>
-					{% endfor %}
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
 
-<!-- 				<div class="nav-exit">
-					<p>^</p>
-				</div> -->
+	{% for item in site.data.navigation %}
+		<li class="nav-item">
+			<a class="nav-link {% if page.url contains item.link %} current {% endif %}" href="{{ item.link }}">{{ item.name }}</a>
 
-				</nav>
-			</div>
+		</li>
+	{% endfor %}
+
+  </div>
+</nav> 
