@@ -1,13 +1,13 @@
 ---
 title: Photography
-bg_theme: dark
+bg_theme: bg-dark
 ---
-<ul>
+<div class="card-columns">
 {% for image in site.static_files %}
 	{% if image.path contains 'photos/100-kb' %}
-		<li>
-			<img src="{{site.baseurl}}{{image.path}}" alt ="image">
-		</li>
+		<div class="card">
+			<img class="card-img-top" src="{{site.baseurl}}{{image.path}}" alt ="{{image.path}}">
+		</div>
 	{% endif %}
 {% endfor %}
-</ul>
+</div>

@@ -1,5 +1,40 @@
 
 $theme-colors: (
-  "primary": #0074d9,
-  "light": #ff4136
+  "primary": #ed1c24,
+  "alert": #ff4136,
+  "body": #333333,
+  "info": #999999
 );
+
+
+
+@font-face {
+    font-family: 'ostrich_sansheavy';
+    src: url('../fonts/ostrichsans-heavy-webfont.eot');
+    src: url('../fonts/ostrichsans-heavy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ostrichsans-heavy-webfont.woff') format('woff'),
+         url('../fonts/ostrichsans-heavy-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ostrich_sansmedium';
+    src: url('../fonts/ostrichsans-medium-webfont.eot');
+    src: url('../fonts/ostrichsans-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ostrichsans-medium-webfont.woff') format('woff'),
+         url('../fonts/ostrichsans-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+$font-family-sans-serif: "Lato", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:       $font-family-sans-serif !default;
+
+
+

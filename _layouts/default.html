@@ -11,12 +11,17 @@
 			<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" href="/assets/css/styles.css">
+
+			<!-- no longer used
 			{% if page.bg_theme == 'light' %}
-			<!--how do comments work-->
 			<link rel="stylesheet" href="/assets/css/styles_light.css">
 			{% elsif page.bg_theme == 'dark' %}
 			<link rel="stylesheet" href="/assets/css/styles_dark.css">
 			{% endif %}
+			-->
+			<link rel="stylesheet: href="https://fonts.googleapis.com/css?family=Lato">
+
+
 
 			<link rel="shortcut icon" href="">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,102 +41,102 @@
 					// Logic: if the site is NOT in /writing or /photos, then set a background photo
 					// Otherwise, the background color will be set depending on the Liquid above in the stylesheet links
 
-					if (activeSite.indexOf("writing") == -1 && activeSite.indexOf("photos")==-1) {
-						$("body").css({"background": "url({{ site.url }}/photos/quarter-size/{{page.bg_image}}_quarter.jpg) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover"});
-					}
+					// if (activeSite.indexOf("writing") == -1 && activeSite.indexOf("photos")==-1) {
+					// 	$("body").css({"background": "url({{ site.url }}/photos/quarter-size/{{page.bg_image}}_quarter.jpg) no-repeat center center fixed", "-webkit-background-size": "cover", "-moz-background-size": "cover", "-o-background-size": "cover", "background-size": "cover"});
+					// }
 
-					// SCRIPT for showing and hiding nav on mobile
-					$(function () {
-						function toggleNav() {
-						}
-					});
-					$(".nav-opener").click(function() {
-						console.log("the nav is slidin'!");
-						$("nav").slideToggle();
+					// // SCRIPT for showing and hiding nav on mobile
+					// $(function () {
+					// 	function toggleNav() {
+					// 	}
+					// });
+					// $(".nav-opener").click(function() {
+					// 	console.log("the nav is slidin'!");
+					// 	$("nav").slideToggle();
 
-					});
-
-
-					// SCRIPT for fading the color of the hamburger
-					$("#hamburger").hover(function() {
-						console.log("nav opener button");
-						$("#nav-opener-button").css("background-color", "#ff3333");
-					}, function() {
-						$("#nav-opener-button").css("background-color", "red");
-					});
-
-					// Expose or cover background image
-					var fullFaded = 0.3;
-					var partialFaded = 0.7;
-					var fadeTime = 200;
-					if (bgtheme == "") {
-						var isFaded = false;
-						$("nav .container").addClass("faded");
-
-						// The first section is for when you click the text; set isFaded and then restore to full opacity if needed
-						$(".container").click(function(){
-							// $(this).siblings("p", "h2").toggle("fast");
-							// $("#hide").toggle();
-							// $("#show").toggle();
-							$(".body-darkener").fadeToggle();
-							$(".image-desc").fadeToggle(fadeTime);
-							isFaded = !isFaded;
-							if (isFaded == false) {
-								$("nav, .container").animate({opacity: 1.0}, fadeTime);
-								console.log($("nav").css("opacity"), 1.0);
-							}
-						});
-						// The second section is for when you click .body-darkener; set isFaded and then fade the nav and container
-						$(".body-darkener").click(function(){
-							// $(this).siblings("p", "h2").toggle("fast");
-							// $("#hide").toggle();
-							// $("#show").toggle();
-							$(".body-darkener").fadeToggle();
-							$(".image-desc").fadeToggle(fadeTime);
-							isFaded = !isFaded;
-							if (isFaded == true) {
-								$("nav, .container").animate({opacity: fullFaded}, fadeTime);
-							}
-						});
-						// The third section is for the hover effect.
-						$("nav, .container").hover(function() {
-							if (isFaded == true) {
-								$("nav, .container").animate({opacity: 1}, fadeTime);
-								console.log("unfaded!");
-							}
-							}, function() {
-							if (isFaded == true) {
-								$("nav, .container").animate({opacity: fullFaded}, fadeTime);
-								console.log("faded again.");
-							}
-						});
-						// This is if I want the .image-desc to have the fading feature. Makes people more likely to hover I think
-						$(".image-desc").hover(function() {
-							// $(this).animate({opacity: 1}, fadeTime);
-							$("nav, .container, .nav-logo").fadeToggle();
-						}, function() {
-							// $(this).animate({opacity: partialFaded}, fadeTime);
-							$("nav, .container, .nav-logo").fadeToggle();
-						})
-					}
+					// });
 
 
-					// This section of the script is for turning the listing li into links.
+					// // SCRIPT for fading the color of the hamburger
+					// $("#hamburger").hover(function() {
+					// 	console.log("nav opener button");
+					// 	$("#nav-opener-button").css("background-color", "#ff3333");
+					// }, function() {
+					// 	$("#nav-opener-button").css("background-color", "red");
+					// });
 
-					var postInIndex = $(".listing li");
-					postInIndex.hover(function() {
-						window.status = $(this).find("a:first").attr("href");
-						$(this).find("a:first").addClass("underlined");
-				    }, function () {
-				        window.status = "";
-						$(this).find("a:first").removeClass("underlined");
+					// // Expose or cover background image
+					// var fullFaded = 0.3;
+					// var partialFaded = 0.7;
+					// var fadeTime = 200;
+					// if (bgtheme == "") {
+					// 	var isFaded = false;
+					// 	$("nav .container").addClass("faded");
+
+					// 	// The first section is for when you click the text; set isFaded and then restore to full opacity if needed
+					// 	$(".container").click(function(){
+					// 		// $(this).siblings("p", "h2").toggle("fast");
+					// 		// $("#hide").toggle();
+					// 		// $("#show").toggle();
+					// 		$(".body-darkener").fadeToggle();
+					// 		$(".image-desc").fadeToggle(fadeTime);
+					// 		isFaded = !isFaded;
+					// 		if (isFaded == false) {
+					// 			$("nav, .container").animate({opacity: 1.0}, fadeTime);
+					// 			console.log($("nav").css("opacity"), 1.0);
+					// 		}
+					// 	});
+					// 	// The second section is for when you click .body-darkener; set isFaded and then fade the nav and container
+					// 	$(".body-darkener").click(function(){
+					// 		// $(this).siblings("p", "h2").toggle("fast");
+					// 		// $("#hide").toggle();
+					// 		// $("#show").toggle();
+					// 		$(".body-darkener").fadeToggle();
+					// 		$(".image-desc").fadeToggle(fadeTime);
+					// 		isFaded = !isFaded;
+					// 		if (isFaded == true) {
+					// 			$("nav, .container").animate({opacity: fullFaded}, fadeTime);
+					// 		}
+					// 	});
+					// 	// The third section is for the hover effect.
+					// 	$("nav, .container").hover(function() {
+					// 		if (isFaded == true) {
+					// 			$("nav, .container").animate({opacity: 1}, fadeTime);
+					// 			console.log("unfaded!");
+					// 		}
+					// 		}, function() {
+					// 		if (isFaded == true) {
+					// 			$("nav, .container").animate({opacity: fullFaded}, fadeTime);
+					// 			console.log("faded again.");
+					// 		}
+					// 	});
+					// 	// This is if I want the .image-desc to have the fading feature. Makes people more likely to hover I think
+					// 	$(".image-desc").hover(function() {
+					// 		// $(this).animate({opacity: 1}, fadeTime);
+					// 		$("nav, .container, .nav-logo").fadeToggle();
+					// 	}, function() {
+					// 		// $(this).animate({opacity: partialFaded}, fadeTime);
+					// 		$("nav, .container, .nav-logo").fadeToggle();
+					// 	})
+					// }
 
 
-				    });
-					postInIndex.click(function() {
-				        window.location = $(this).find("a:first").attr("href");
-				        return false;
-					});
+					// // This section of the script is for turning the listing li into links.
+
+					// var postInIndex = $(".listing li");
+					// postInIndex.hover(function() {
+					// 	window.status = $(this).find("a:first").attr("href");
+					// 	$(this).find("a:first").addClass("underlined");
+				 //    }, function () {
+				 //        window.status = "";
+					// 	$(this).find("a:first").removeClass("underlined");
+
+
+				 //    });
+					// postInIndex.click(function() {
+				 //        window.location = $(this).find("a:first").attr("href");
+				 //        return false;
+					// });
 
 				//attempt to rotate menu hamburger but I gave up 2020/02/23
 				// (function(document){
@@ -162,38 +167,38 @@
 
 
 
-		})
-			// SCRIPT FOR dynamically loading LOGO IMG
-				var breakpoint1 = window.matchMedia( "(min-width: 600px)" );
-				var navLogoImg = ".logo-img";
-
-
-				$(function () {
-					function whichLogo() {
-						if (breakpoint1.matches) {
-						    	$(navLogoImg).attr("src", "../assets/images/website-logo-rd1-long-01.png");
-						    	console.log("image is long");
-									var dispwithpx = $(".real-header").css("height");
-									console.log(dispwithpx);
-
-						} else {
-						    	$(navLogoImg).attr("src", "../assets/images/website-logo-rd1-01.png");
-								console.log("image is short");
-								var dispwithpx = $(".real-header").css("height");
-								console.log(dispwithpx);
-
-						}
-						var displacement = $(".real-header").height();
-						$("nav").css("top", dispwithpx);
-						console.log(dispwithpx);
-						$("nav").css("height",$(window).height()-displacement);
-					}
-					whichLogo(); // Call listener function at run time
-					breakpoint1.addListener(whichLogo); // Attach listener function on state changes
-
-
-				// SCRIPT for moving the fixed nav in relation to the fixed logo area, attempt #1
 				})
+			// // SCRIPT FOR dynamically loading LOGO IMG
+			// 	var breakpoint1 = window.matchMedia( "(min-width: 600px)" );
+			// 	var navLogoImg = ".logo-img";
+
+
+			// 	$(function () {
+			// 		function whichLogo() {
+			// 			if (breakpoint1.matches) {
+			// 			    	$(navLogoImg).attr("src", "../assets/images/website-logo-rd1-long-01.png");
+			// 			    	console.log("image is long");
+			// 						var dispwithpx = $(".real-header").css("height");
+			// 						console.log(dispwithpx);
+
+			// 			} else {
+			// 			    	$(navLogoImg).attr("src", "../assets/images/website-logo-rd1-01.png");
+			// 					console.log("image is short");
+			// 					var dispwithpx = $(".real-header").css("height");
+			// 					console.log(dispwithpx);
+
+			// 			}
+			// 			var displacement = $(".real-header").height();
+			// 			$("nav").css("top", dispwithpx);
+			// 			console.log(dispwithpx);
+			// 			$("nav").css("height",$(window).height()-displacement);
+			// 		}
+			// 		whichLogo(); // Call listener function at run time
+			// 		breakpoint1.addListener(whichLogo); // Attach listener function on state changes
+
+
+			// 	// SCRIPT for moving the fixed nav in relation to the fixed logo area, attempt #1
+			// 	})
 
 
 			</script>
@@ -203,16 +208,12 @@
 			<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 			<link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Serif&display=swap" rel="stylesheet">
 			<link href="https://fonts.googleapis.com/css?family=PT+Sans|Patua+One&display=swap" rel="stylesheet">
-
+			{% seo %}
 		</head>
-		<body>
-			<div class="container bg-light">
+		<body class="{{page.bg_theme}}">
+			<div class="container">
 				{% include navigation.html %}
-				<div class="row">
-					<div class="col">
-				        <h1 class="text-primary">Hello there!</h1>
-					</div>
-				</div>
+
 				<div class="row">
 					<div class="col">
 						{{ content }}

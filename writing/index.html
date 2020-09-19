@@ -3,12 +3,11 @@ layout: default
 title: Writing
 bg_theme: light
 ---
-<h1>Latest Posts</h1>
 {% include writing-nav.html %}
 <!-- <h1 class="not-title"><a href="themes.html">Organized by theme</a></h1>
  -->
- <ul class="listing">
+<div class="card-columns">
   {% for post in site.posts %}
     {% include post-listing.html %}
   {% endfor %}
-</ul>
+</div>
